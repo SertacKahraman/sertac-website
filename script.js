@@ -30,26 +30,43 @@
         }
     };
 
-    // ═══ 3. DOCK — Fish-eye magnification ═══
+    // ═══ 3. DOCK — Fish-eye magnification (Optimized to prevent forced reflow) ═══
     const dock = document.getElementById('dock');
     if (dock) {
         const dockItems = dock.querySelectorAll('.dock-item');
-        dock.addEventListener('mousemove', (e) => {
-            dockItems.forEach(item => {
-                const icon = item.querySelector('.dock-icon');
-                if (!icon) return;
+        let itemCenters = [];
+
+        function updateCenters() {
+            itemCenters = Array.from(dockItems).map(item => {
                 const rect = item.getBoundingClientRect();
-                const center = rect.left + rect.width / 2;
-                const dist = Math.abs(e.clientX - center);
-                const scale = Math.max(1, 1.4 - (dist / 120) * 0.4);
-                icon.style.transform = `translateY(${-(scale - 1) * 20}px) scale(${scale})`;
+                return {
+                    el: item.querySelector('.dock-icon'),
+                    center: rect.left + rect.width / 2
+                };
+            });
+        }
+
+        // Defer initial measurement to avoid forced reflow during initial page load
+        window.addEventListener('load', () => {
+            setTimeout(updateCenters, 100);
+        });
+        window.addEventListener('resize', updateCenters);
+
+        dock.addEventListener('mousemove', (e) => {
+            // Use requestAnimationFrame for smoother performance
+            requestAnimationFrame(() => {
+                itemCenters.forEach(item => {
+                    if (!item.el) return;
+                    const dist = Math.abs(e.clientX - item.center);
+                    const scale = Math.max(1, 1.4 - (dist / 120) * 0.4);
+                    item.el.style.transform = `translateY(${-(scale - 1) * 20}px) scale(${scale})`;
+                });
             });
         });
 
         dock.addEventListener('mouseleave', () => {
-            dockItems.forEach(item => {
-                const icon = item.querySelector('.dock-icon');
-                if (icon) icon.style.transform = '';
+            itemCenters.forEach(item => {
+                if (item.el) item.el.style.transform = '';
             });
         });
     }

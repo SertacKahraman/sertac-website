@@ -1014,20 +1014,29 @@ button {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     opacity: 1;
+    padding: 14px 8px;
+    /* Increased touch target */
+    margin: -14px -8px;
+    /* Offset padding to keep layout tight */
+    display: inline-block;
 }
 
 .footer-nav {
     display: flex;
-    gap: 24px;
+    gap: 32px;
+    /* More spacing between links */
 }
 
 .footer-nav-link {
     font-size: 11px;
     font-weight: 500;
     color: var(--text-2);
-    padding: 12px 4px;
-    margin: -12px -4px;
+    padding: 14px 10px;
+    /* Increased touch target */
+    margin: -14px -10px;
+    /* Offset padding */
     transition: color 0.2s, transform 0.2s;
+    display: inline-block;
 }
 
 .footer-nav-link:hover {
