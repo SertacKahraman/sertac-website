@@ -23,11 +23,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"
-        media="print" onload="this.media='all'">
+    <!-- Optimized Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Essential Critical CSS (Ensures no white flash on load) -->
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            font-family: 'Inter', sans-serif;
+            color: #F2F2F7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wallpaper {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background: #121218;
+        }
+    </style>
+
+    <!-- Main Stylesheet (Blocking load for stability) -->
     <link rel="stylesheet" href="style.css">
 
 </head>

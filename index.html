@@ -26,21 +26,12 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
 
-    <!-- Optimized Google Fonts - Non-blocking load -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"
-        media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Critical CSS for LCP (Largest Contentful Paint) - Eliminates render delay for 'h2.about-name' -->
+    <!-- Essential Critical CSS (Ensures no white flash on load) -->
     <style>
         :root {
-            --wall-1: #121218;
-            --text-1: #F2F2F7;
-            --win-bg: rgba(36, 36, 42, 0.88);
-            --win-titlebar: rgba(46, 46, 54, 0.96);
-            --win-border: rgba(255, 255, 255, 0.1);
-            --win-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(255, 255, 255, 0.08);
             --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --r: 12px;
         }
 
         html,
@@ -49,7 +40,7 @@
             padding: 0;
             background: #000;
             font-family: var(--font);
-            color: var(--text-1);
+            color: #F2F2F7;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -60,94 +51,14 @@
             background: #121218;
         }
 
-        .desktop {
-            position: relative;
-            z-index: 1;
-            min-height: 100vh;
-            padding: 72px 20px 80px;
-        }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 150;
-            background: rgba(15, 15, 28, 0.55);
-            backdrop-filter: blur(40px) saturate(180%);
-            -webkit-backdrop-filter: blur(40px) saturate(180%);
-            height: 48px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .win-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.1fr 1fr;
-            gap: 20px;
-        }
-
         .win-skills {
             min-height: 480px;
         }
 
-        /* Prevents layout shift (CLS) on load */
-        .window {
-            background: var(--win-bg);
-            border: 1px solid var(--win-border);
-            border-radius: var(--r);
-            box-shadow: var(--win-shadow);
-            backdrop-filter: blur(40px) saturate(150%);
-            -webkit-backdrop-filter: blur(40px) saturate(150%);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .window-titlebar {
-            height: 38px;
-            display: flex;
-            align-items: center;
-            padding: 0 14px;
-            background: var(--win-titlebar);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .about-body {
-            padding: 24px;
-        }
-
-        .about-header {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            margin-bottom: 24px;
-        }
-
-        .about-name {
-            font-size: 2.2rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin: 0;
-        }
-
-        @media (max-width: 850px) {
-            .win-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-name {
-                font-size: 1.8rem;
-            }
-        }
+        /* Prevents layout shift */
     </style>
 
-    <!-- Main Stylesheet - Non-blocking load -->
-    <link rel="preload" as="style" href="style.css">
-    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="style.css">
-    </noscript>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
