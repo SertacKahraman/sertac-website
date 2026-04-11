@@ -41,6 +41,10 @@ const translations = {
         "projects-portfolio-long-desc": "Premium portfolio with a macOS desktop interface. Built with pure HTML/CSS/JS, featuring a custom i18n system and SEO optimization.",
         "projects-kahramanapp-desc": "Apartment management & utility tracking app.",
         "projects-kahramanapp-long-desc": "Apartment management app for tracking 13 units with utility bills (water, electricity, gas), insurance numbers, and notes. Built with React Native and Expo, using AsyncStorage for local data persistence.",
+        "projects-trimless-desc": "SEO-focused product website for Trimless LED solutions.",
+        "projects-trimless-long-desc": "High-conversion product website for Trimless LED solutions. Built with Next.js 16 and TypeScript, featuring SEO-focused content architecture, structured data, responsive storytelling, and WhatsApp lead capture flows.",
+        "projects-realart-desc": "Corporate website for an architectural studio.",
+        "projects-realart-long-desc": "Corporate website for Real Art Mimarlık, built to showcase architectural projects, services, and studio identity. Developed with Next.js and TypeScript, with motion-rich sections, SEO-focused content structure, and conversion-driven contact flows.",
         "page-title-index": "Sertaç Kahraman — Portfolio",
         "page-title-about": "About — Sertaç Kahraman",
         "page-title-projects": "Projects — Sertaç Kahraman"
@@ -87,6 +91,10 @@ const translations = {
         "projects-portfolio-long-desc": "macOS arayüzlü premium portfolyo sitesi. Saf HTML, CSS ve JS ile geliştirildi; özel i18n sistemi ve SEO optimizasyonu içerir.",
         "projects-kahramanapp-desc": "Daire yönetimi ve fatura takip uygulaması.",
         "projects-kahramanapp-long-desc": "13 dairelik bir apartmanın yönetimi için geliştirilen uygulama. Su, elektrik, doğalgaz faturaları, DASK numaraları ve notları takip eder. React Native ve Expo ile geliştirildi, AsyncStorage ile yerel veri saklama.",
+        "projects-trimless-desc": "Trimless LED çözümleri için SEO odaklı ürün web sitesi.",
+        "projects-trimless-long-desc": "Trimless LED çözümleri için geliştirilen yüksek dönüşüm odaklı ürün web sitesi. Next.js 16 ve TypeScript ile geliştirildi; SEO odaklı içerik kurgusu, structured data, responsive ürün anlatımı ve WhatsApp lead toplama akışları içerir.",
+        "projects-realart-desc": "Bir mimarlık ofisi için kurumsal web sitesi.",
+        "projects-realart-long-desc": "Real Art Mimarlık için geliştirilen kurumsal web sitesi. Mimari projeleri, hizmetleri ve marka kimliğini öne çıkarır; Next.js ve TypeScript ile, hareketli bölümler, SEO odaklı içerik yapısı ve dönüşüm odaklı iletişim akışlarıyla geliştirildi.",
         "page-title-index": "Sertaç Kahraman — Portfolyo",
         "page-title-about": "Hakkımda — Sertaç Kahraman",
         "page-title-projects": "Projeler — Sertaç Kahraman"
