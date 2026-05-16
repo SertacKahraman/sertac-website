@@ -10,6 +10,10 @@
                     "value": "nosniff"
                 },
                 {
+                    "key": "Content-Security-Policy",
+                    "value": "default-src 'self'; script-src 'self' 'sha256-dXX0o+tN+1OHY3aOReS7Gr1c61wPjQDHqKzBKHSeblw=' 'sha256-+/4Go8rIvgJX9nuB63cO890w6TNdCnYMZAEdhqjDtTE='; script-src-attr 'none'; style-src 'self' 'sha256-tgpK2x7WXCYZu80GPl18Tuj2i2QFoiZIpZrPNwxVCWM=' 'sha256-Ik08+hvI3hPaK6LQmPsIpKS07vMVTnVrDsZEMgoh7yE='; style-src-attr 'none'; font-src 'self'; img-src 'self' https: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests"
+                },
+                {
                     "key": "X-Frame-Options",
                     "value": "DENY"
                 },

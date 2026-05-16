@@ -86,6 +86,39 @@
 
     // ═══ 5. i18n — Language Switching ═══
     let currentLang = localStorage.getItem('sertac-lang') || 'en';
+    const cvFiles = {
+        en: '/sertac-kahraman-cv-en.pdf',
+        tr: '/sertac-kahraman-cv-tr.pdf',
+        fallback: '/sertac-kahraman-cv-en.pdf'
+    };
+    const cvLabels = {
+        en: 'Open CV PDF',
+        tr: 'CV PDF dosyasını aç'
+    };
+
+    function setCvLinks(href, lang) {
+        const label = cvLabels[lang] || cvLabels.en;
+
+        document.querySelectorAll('[data-cv-link]').forEach(link => {
+            link.setAttribute('href', href);
+            link.setAttribute('aria-label', label);
+        });
+    }
+
+    async function updateCvLinks(lang) {
+        const preferredHref = cvFiles[lang] || cvFiles.fallback;
+
+        try {
+            const response = await fetch(preferredHref, { method: 'HEAD' });
+            if (lang === currentLang) {
+                setCvLinks(response.ok ? preferredHref : cvFiles.fallback, lang);
+            }
+        } catch (_) {
+            if (lang === currentLang) {
+                setCvLinks(cvFiles.fallback, lang);
+            }
+        }
+    }
 
     function setLanguage(lang) {
         if (!window.translations || !window.translations[lang]) return;
@@ -117,6 +150,8 @@
         if (window.translations[lang][titleKey]) {
             document.title = window.translations[lang][titleKey];
         }
+
+        updateCvLinks(lang);
     }
 
     const langToggle = document.getElementById('lang-toggle');

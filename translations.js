@@ -2,6 +2,7 @@ const translations = {
     en: {
         "nav-about": "About",
         "nav-projects": "Projects",
+        "nav-cv": "CV",
         "about-title": "About Me — Notes",
         "about-name": "Sertaç Kahraman",
         "about-role": "Software Developer · Computer Engineering Student",
@@ -24,6 +25,7 @@ const translations = {
         "footer-brand": "Sertaç Kahraman",
         "footer-about": "About",
         "footer-projects": "Projects",
+        "footer-cv": "CV",
         "about-detailed-title": "About Me",
         "about-detailed-text": "I'm Sertaç, a Computer Engineering student building full-stack applications across mobile and web platforms.\n\nI develop cross-platform apps using React, React Native, and TypeScript, and design backend services with Go and PostgreSQL. I enjoy working on complete systems — from user interfaces and authentication flows to database design and API architecture.\n\nI've contributed to projects ranging from AI-powered assistants to a TÜBİTAK-funded marketplace, gaining hands-on experience in real-world application development.\n\nMy goal is to continuously improve as a software developer and build reliable, maintainable, and user-focused systems.",
         "about-skills-title": "My Skills",
@@ -52,6 +54,7 @@ const translations = {
     tr: {
         "nav-about": "Hakkımda",
         "nav-projects": "Projeler",
+        "nav-cv": "CV",
         "about-title": "Hakkımda — Notlar",
         "about-name": "Sertaç Kahraman",
         "about-role": "Yazılım Geliştirici · Bilgisayar Mühendisliği Öğrencisi",
@@ -74,6 +77,7 @@ const translations = {
         "footer-brand": "Sertaç Kahraman",
         "footer-about": "Hakkımda",
         "footer-projects": "Projeler",
+        "footer-cv": "CV",
         "about-detailed-title": "Hakkımda",
         "about-detailed-text": "Ben Sertaç, mobil ve web platformlarında full-stack uygulamalar geliştiren bir Bilgisayar Mühendisliği öğrencisiyim.\n\nReact, React Native ve TypeScript kullanarak platformlar arası uygulamalar geliştiriyor; Go ve PostgreSQL ile backend servisleri tasarlıyorum. Kullanıcı arayüzlerinden kimlik doğrulama akışlarına, veritabanı tasarımından API mimarisine kadar uçtan uca sistemler üzerinde çalışmaktan keyif alıyorum.\n\nYapay zeka destekli asistanlardan TÜBİTAK destekli pazar yeri uygulamalarına kadar çeşitli projelerde yer alarak gerçek dünya uygulama geliştirme konularında pratik deneyim kazandım.\n\nHedefim, bir yazılım geliştirici olarak kendimi sürekli geliştirmek ve güvenilir, sürdürülebilir, kullanıcı odaklı sistemler inşa etmektir.",
         "about-skills-title": "Yeteneklerim",
